@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Ifairdata } from '../interface/fairs';
 import { fairsArr } from '../const/fairs';
 
@@ -11,17 +11,21 @@ export class FairsdashboardComponent implements OnInit {
 
   constructor() { }
   fairsArr! : Array<Ifairdata>;
-  cardId!:any;
-  cardObj!:Ifairdata;
+  fairId! : Ifairdata
+  fairsObj!:Ifairdata;
+  selectedFairId!:string;
+  @Input()selectedCardId! : string;
+
 
   ngOnInit(): void {
     this.fairsArr = fairsArr;
-    console.log(fairsArr)
+    console.log(fairsArr);
+    console.log(this.selectedCardId)
   }
-  getCardDetails(fairId:string){
-    console.log(fairId);
-    this.cardId = fairId;
-    console.log(this.cardId)
+  getCardDetails(fairId:Ifairdata){
+    console.log(fairId)
+    this.fairsObj = fairId;
+
   }
 
 }

@@ -1,8 +1,10 @@
-.card-info{
+.card{
     background-image: linear-gradient(90deg, #156E72 0%, #99f1c8 100%);
     padding: 10px;
-    color: #fff;
-    cursor: pointer;
+}
+.card-body{
+    background-color:#fff;
+    padding: 2px;
 }
     .active::after{
         content: '';
@@ -14,7 +16,4 @@
         background-color: #156E72;
         transform: rotate(45deg);
     }
-    .card-body{
-        background-color:#fff;
-        padding: 5px;
-    }
+    

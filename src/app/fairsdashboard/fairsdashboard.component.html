@@ -1,10 +1,10 @@
-<h1 class="header text-center">Fairs</h1>
+<h1 class="header text-left text-white font-weight-light">Fairs</h1>
 <div class="row">
     <div class="col-md-4">
         <app-fairscard *ngFor="let fairscard of fairsArr" [singlefairscard]="fairscard"
         (sendCardDetails)="getCardDetails($event)"></app-fairscard>
     </div>
     <div class="col-md-8">
-        <app-fairsdetails [getCardDetails]="fairsArr" [getCardId]="cardId"></app-fairsdetails>
+        <app-fairsdetails [getCardDetails]="fairsObj"></app-fairsdetails>
     </div>
 </div>

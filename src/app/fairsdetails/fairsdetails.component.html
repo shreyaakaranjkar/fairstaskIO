@@ -1,10 +1,29 @@
-<div class="card">
-    <h4 class="header text-center">
-        {{fairId.fairName}}
-    </h4>
-    <hr>
-    <div class="card-body">
-        <img [src]="fairId.bannerUrl" alt="" class="img-fluid" >
-    <p [innerHTML]="fairId.schoolDescription"></p>
+
+<section>
+    <div class="banner my-2">
+        <img [src]="getCardDetails.bannerUrl" alt="" class="bannerImg">
+    
+    <div class="fairDetails text-white">
+        <h4>{{getCardDetails.fairName}} {{getCardDetails.startDate | date}}</h4>
+        <p class="my-2">
+            Event type : {{getCardDetails.type}}
+        </p>
+        <p class="my-2 Deadline">
+            Registration Deadline : {{getCardDetails.endDate * 1000 | date}}
+        </p>
+    </div>
+    <div class="schools-btn">
+        <button class="btn btn-light rounded mr-4">Schools Attending</button>
+        <button class="btn btn-light rounded">Jobs at Schools Attending</button>
+    </div>
+    <div class="event-description">
+        <h4>{{getCardDetails.type}}</h4>
+        
+        <h4>Events Date & Time</h4>
+        <p> {{getCardDetails.startDate | date : 'medium'}}</p>
+
+        <h4>Description</h4>
+        <p [innerHTML]="getCardDetails.schoolDescription"></p>
     </div>
 </div>
+</section>

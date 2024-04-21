@@ -1,5 +1,43 @@
 .header{
     background-image: linear-gradient(90deg, #156E72 0%, #99f1c8 100%);
-    padding: 10px;
     color: #fff;
+    padding: 4px;
+}
+.banner{
+    position: relative;
+}
+.bannerImg{
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+}
+.fairDetails h4{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    color: #fff;
+    
+}
+.fairDetails p{
+    position: absolute;
+top: 120px;
+left: 10px;
+}
+.fairDetails p.Deadline{
+    position: absolute;
+top: 160px;
+left: 10px;
+
+}
+.schools-btn{
+    button{
+        background-color: rgb(234, 232, 232);
+        padding: 12px;
+        margin-top: 12px;
+    }
+}
+.event-description{
+    .text-muted,h4{
+        color: rgb(177, 176, 176);
+    }
 }
