@@ -16,16 +16,16 @@ export class FairsdashboardComponent implements OnInit {
   selectedFairId!:string;
   @Input()selectedCardId! : string;
 
-
   ngOnInit(): void {
     this.fairsArr = fairsArr;
     console.log(fairsArr);
     console.log(this.selectedCardId)
+    this.fairsObj = this.fairsArr[0];
+    this.selectedFairId = this.fairsObj.fairId
   }
   getCardDetails(fairId:Ifairdata){
-    console.log(fairId)
-    this.fairsObj = fairId;
-
+    console.log(fairId);
+    this.selectedFairId = fairId.fairId
+    this.fairsObj = fairId;  
   }
-
 }

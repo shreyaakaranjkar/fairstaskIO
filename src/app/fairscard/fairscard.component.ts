@@ -11,14 +11,13 @@ export class FairscardComponent implements OnInit {
   constructor() { }
   @Input()singlefairscard!:Ifairdata
   @Output()sendCardDetails : EventEmitter<any>=new EventEmitter();
- selectedId! : string
+ @Input()selectedId! : string
 
   ngOnInit(): void {
   }
 
 
   sendDataToParent(){
-    // this.selectedId = this.singlefairscard.fairId
     this.sendCardDetails.emit(this.singlefairscard);
 
   }
