@@ -4,7 +4,7 @@
         <img [src]="getCardDetails.bannerUrl" alt="" class="bannerImg img-fluid">
     </div>
     <div class="fairDetails text-white">
-        <h4 class="fairName">{{getCardDetails.fairName}} {{getCardDetails.startDate | date}}</h4>
+        <h4 class="fairName">{{getCardDetails.fairName}} {{getCardDetails.startDate *1000 | date}}</h4>
         <p class="my-2">
             Event type : {{getCardDetails.type}}
         </p>
@@ -20,7 +20,7 @@
         <h4>{{getCardDetails.type}}</h4>
         
         <h4>Events Date & Time</h4>
-        <p> {{getCardDetails.startDate | date : 'medium'}}</p>
+        <p> {{getCardDetails.startDate *1000 | date : 'medium'}}</p>
 
         <h4>Description</h4>
         <p [innerHTML]="getCardDetails.schoolDescription"></p>
